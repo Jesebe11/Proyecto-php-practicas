@@ -1,6 +1,6 @@
 <?php 
 
-include('jobs.php');
+require_once('jobs.php');
 
 $name = 'Jesebell';
 //var_dump($name);
@@ -67,22 +67,17 @@ $titleFull = $phpDev . ' '.  $developer;
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
           <?php
-        $totalMonths = 0;
-          for( $idx = 0; $idx < count($jobs); $idx++) {
-            //$totalMonths = $totalMonths + $jobs[$idx]['months'];
-            $totalMonths += $jobs[$idx]['months'];
-              if ($totalMonths > $limitMonths) {
-              break;
+            $totalMonths = 0;
+            for($idx = 0;$idx < count($jobs); $idx++) {
+              // $totalMonths = $totalMonths + $jobs[$idx]['months'];
+              $totalMonths += $jobs[$idx]->months;
+              if($totalMonths > $limitMonths) {
+                break;
               }
 
-            
-            printJob($jobs[$idx]);
-          }
-
-      
-          
-          
-          ?>
+              printJob($jobs[$idx]);
+            }
+            ?>
           </ul>
         </div>
         <div>
