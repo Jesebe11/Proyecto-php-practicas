@@ -1,5 +1,7 @@
 <?php 
 
+use App\Models\Job;
+//var_dump($_GET);
 require_once('jobs.php');
 
 $name = 'Jesebell';
