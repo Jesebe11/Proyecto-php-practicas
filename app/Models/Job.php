@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Models;
 require 'BaseElement.php';
 
 class Job extends BaseElement{
@@ -17,6 +17,8 @@ class Job extends BaseElement{
       
         return "Job duration $years years $extraMonths months";
     }
+
+    
 
 }
 
